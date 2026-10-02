@@ -1,8 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Permanent+Marker&family=Ysabeau+SC:wght@300;400;500;600&display=swap');
+
 body {
-    background-color: rgb(123, 123, 222);
+    background-color: rgb(2, 2, 38);
 }
 
-p {
-    color: rgb(17, 17, 53)
+header img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 20px;
+}
 
+main {
+    width: 85%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+footer {
+    background-color: rgb(0, 0, 3);
+    padding: 10px;
+}
+
+p, li {
+    color: rgb(155, 154, 144);
+    font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+    color: darkgray;
+    font-family: "Permanent Marker", cursive;
+}
+
+h2, h3 {
+    color: darkgray;
+    font-family: "Ysabeau SC", sans-serif;
+}
+
+.navi {
+    background-color: rgb(0, 0, 3);
+    padding: 20px;
+}
+
+.navi a {
+    color: darkgray;
+    font-family: "Ysabeau SC", sans-serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+}
+
+.punainenviiva {
+    height: 3px;
+    background-color: rgb(231, 34, 46);
+    margin: 20px 0px;
+}
+
+.palvelut {
+    box-sizing: border-box;
+    width: 300px;
+    background-color: rgb(0, 0, 3);
+    padding: 20px;
+    margin: 24px;
+    border: 4px solid rgb(231, 34, 46);
+    border-radius: 20px;
+}
+
+.tuotteet {
+    background-color: rgb(0, 0, 3);
+    padding: 25px 40px;
+    margin: 12px;
+    border-radius: 20px;
 }
