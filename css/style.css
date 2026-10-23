@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Permanent+Marker&family=Ysabeau+SC:wght@300;400;500;600&display=swap');
 
+/* YLEISET JUTUT */
 body {
-    background-color: rgb(2, 2, 38);
+    margin: 0px;
+    background-color: rgb(2, 2, 31);
 }
 
-header img {
+header {
+    background-color: rgb(2, 2, 31);
+}
+
+.banneri {
     width: 100%;
     height: auto;
     display: block;
@@ -12,9 +18,23 @@ header img {
 }
 
 main {
+    display: flex;
     width: 85%;
     max-width: 1200px;
     margin: 40px auto;
+    gap: 30px;
+}
+
+article {
+    flex: 3;
+}
+
+aside {
+    background-color: rgb(0, 0, 3);
+    padding: 20px;
+    border-radius: 20px;
+    line-height: 2.0;
+    flex: 1;
 }
 
 footer {
@@ -23,7 +43,8 @@ footer {
     text-align: center;
 }
 
-p, li {
+p,
+li {
     color: rgb(155, 154, 144);
     font-family: "Montserrat", sans-serif;
 }
@@ -33,24 +54,37 @@ h1 {
     font-family: "Permanent Marker", cursive;
 }
 
-h2, h3 {
+h2,
+h3 {
     color: darkgray;
     font-family: "Ysabeau SC", sans-serif;
 }
 
+/* NAVIGAATIO*/
 .navi {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     background-color: rgb(0, 0, 3);
-    padding: 20px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .navi a {
+    display: block;
     color: darkgray;
     font-family: "Ysabeau SC", sans-serif;
-    font-size: 20px;
+    font-size: 21px;
     letter-spacing: 3px;
     text-decoration: none;
-    padding: 10px;
-    margin: 10px;
+    padding: 10px 25px;
+}
+
+.navi a:hover {
+    background-color: rgb(1, 1, 20);
 }
 
 .punainenviiva {
@@ -59,19 +93,92 @@ h2, h3 {
     margin: 20px 0px;
 }
 
+/*PALVELUT*/
 .palvelut {
-    box-sizing: border-box;
-    width: 300px;
+    display: flex;
+    align-items: center;
     background-color: rgb(0, 0, 3);
-    padding: 20px;
+    padding: 15px 15px;
     margin: 24px;
     border: 3px solid rgb(231, 34, 46);
     border-radius: 20px;
 }
 
+.palveluteksti {
+    padding: 20px;
+}
+
+.palvelut img {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.palvelut:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+.tokakuva {
+    display: none;
+}
+
+.ekakuva:hover {
+    display: none;
+}
+
+.ekakuva:hover+.tokakuva {
+    /*TARKISTA TOIMINTA*/
+    display: block;
+}
+
+/*VERKKOKAUPPA*/
 .tuotteet {
+    display: flex;
+    align-items: center;
     background-color: rgb(0, 0, 3);
-    padding: 25px 40px;
-    margin: 12px;
+    padding: 25px;
+    margin: 20px;
     border-radius: 20px;
+}
+
+.tuotteet img {
+    width: 200px;
+    height: auto;
+    margin-right: 30px;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.tuoteteksti {
+    flex: 1;
+}
+
+.tuoteteksti h2 {
+    margin-top: 0;
+}
+
+.tuotteet img:hover {
+    transform: scale(1.25);
+}
+
+/*GALLERIA*/
+.galleria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.galleria img {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.galleria img:hover {
+    transform: scale(1.15);
 }
